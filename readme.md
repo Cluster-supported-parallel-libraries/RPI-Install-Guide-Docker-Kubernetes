@@ -7,7 +7,7 @@ $ sudo systemctl enable ssh
 $ sudo systemctl start ssh
 ```
 
-### Opdater Raspberry Pi
+### Opdater Raspberry Piadadad
 ```sh
 $ sudo apt-get update
 $ sudo apt-get upgrade
