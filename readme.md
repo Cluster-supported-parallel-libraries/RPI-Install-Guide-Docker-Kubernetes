@@ -49,9 +49,20 @@ $ tar zxf 'navnet på din downloaded .NET Runtime' -C 'stien til ny-lavet mappe'
 
 Exportere filstien til din globale enviroment variable:
 ```sh
-$ export DOTNET_ROOT=$HOME/dotnet-arm32
-$ export PATH=$PATH:$HOME/dotnet-arm32
+$ export DOTNET_ROOT=/home/master/dotnet-amd64
+$ export PATH=$PATH:$HOME/dotnet-amd64
 ```
+
+Exportere din enviroment variable til at peristere
+```
+sudo nano /etc/profile
+```
+add til nederst til filen:
+```
+export DOTNET_ROOT=/home/master/dotnet-amd64
+export PATH=$PATH:$HOME/dotnet-amd64
+```
+
 
 Test med:
 ```sh
