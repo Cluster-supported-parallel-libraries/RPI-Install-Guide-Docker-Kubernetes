@@ -6,6 +6,10 @@
 $ sudo systemctl enable ssh
 $ sudo systemctl start ssh
 ```
+### Get Raspberry Pi IP
+```sh
+$ cat /var/lib/misc/dnsmasq.leases
+```
 
 ### Opdater Raspberry Pi
 ```sh
