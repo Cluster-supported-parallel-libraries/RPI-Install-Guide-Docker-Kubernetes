@@ -24,7 +24,7 @@ $ sudo curl -sSL https://get.docker.com/ | sh
 ```
 Test lige om du kan køre:
 ```sh
-$ Docker version
+$ docker version
 ```
 
 Hvis den broker sig over 'got permission denied', så kør følgende kommando:
