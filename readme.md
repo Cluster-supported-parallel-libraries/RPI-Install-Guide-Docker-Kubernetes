@@ -37,7 +37,13 @@ Genstart efter
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
 ```sh
+brug følgende link til .NET core SDK
+arm 32 : https://download.visualstudio.microsoft.com/download/pr/d52fa156-1555-41d5-a5eb-234305fbd470/173cddb039d613c8f007c9f74371f8bb/dotnet-sdk-3.1.101-linux-arm.tar.gz
+arm 64 : https://download.visualstudio.microsoft.com/download/pr/cf54dd72-eab1-4f5c-ac1e-55e2a9006739/d66fc7e2d4ee6c709834dd31db23b743/dotnet-sdk-3.1.101-linux-arm64.tar.gz
 $ wget 'link fra hjemmeside (.NET Core SDK)'
+brug følgende link til .NET Runtime
+arm 32 : https://download.visualstudio.microsoft.com/download/pr/98931269-612c-47cd-a5a1-f1d8e616c950/1ba015724bba919eccbf159dbda0a483/dotnet-runtime-3.1.1-linux-arm.tar.gz
+arm 64 : https://download.visualstudio.microsoft.com/download/pr/38325910-0157-4f3a-b093-da799dcaa24b/d4892d3a53a6d917fbab4037624181a9/dotnet-runtime-3.1.1-linux-arm64.tar.gz
 $ wget 'link fra hjemmeside (.NET Runtime)'
 ```
 Lav et direktory som dine filer pakkes ud til:
