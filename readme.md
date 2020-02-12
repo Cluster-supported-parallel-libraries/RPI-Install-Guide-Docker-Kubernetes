@@ -51,10 +51,10 @@ $ tar zxf 'navnet på din downloaded .NET CORE SDK fil' -C 'stien til ny-lavet m
 $ tar zxf 'navnet på din downloaded .NET Runtime' -C 'stien til ny-lavet mappe'
 ```
 
-Exportere filstien til din globale enviroment variable:
+Exportere filstien til din globale enviroment variable (OPS, platform arm32 eller amd64):
 ```sh
-$ export DOTNET_ROOT=/home/master/dotnet-amd64
-$ export PATH=$PATH:$HOME/dotnet-amd64
+$ export DOTNET_ROOT=/home/master/dotnet-arm32
+$ export PATH=$PATH:$HOME/dotnet-arm32
 ```
 
 Exportere din enviroment variable til at peristere
