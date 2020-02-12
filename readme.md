@@ -91,7 +91,7 @@ $ dotnet --info
 Vi ønsker at bygge til en arm processor. Hertil skal vi bygge vores projekt med buildx med den valgte platform arm.
 
 ```sh
-docker buildx build --platform linux/arm/v7 -t 'username'/'projektName':'version' . --load 
+docker buildx build --platform linux/amd64,linux/arm/v7 -t 'username'/'projektName':'version' . --load 
 ```
 - Grunden til --load argumentet, er da vores image til tider ikke bliver loaded ind, men ligger i cache
 - Og til sidst pusher vi til vores dockerhub repo
