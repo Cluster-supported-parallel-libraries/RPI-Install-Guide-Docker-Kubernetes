@@ -34,7 +34,7 @@ $ sudo usermod -aG docker 'dit username'
 Genstart efter
 
 #### Installer .NET Core SDK og .NET Runtime
-Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.0
+Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
 ```sh
 $ wget 'link fra hjemmeside (.NET Core SDK)'
