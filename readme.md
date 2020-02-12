@@ -72,8 +72,8 @@ sudo nano /etc/profile
 ```
 add til nederst til filen:
 ```
-export DOTNET_ROOT=/home/master/dotnet-amd64
-export PATH=$PATH:$HOME/dotnet-amd64
+export DOTNET_ROOT=/home/master/dotnet-arm32
+export PATH=$PATH:$HOME/dotnet-arm32
 ```
 
 
