@@ -17,6 +17,11 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
+### (OPTIONAL) Set hostname
+```sh
+$ sudo hostnamectl set-hostname 'hostname'
+```
+
 ### Installer docker engine Raspberry Pi
 Link til hjemmeside: https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl?fbclid=IwAR15V0ArXn00x7a4Dn3oQkmqzfQma48PslYZX35khxu8_YwYPYaIPE7IuPA
 ```sh
