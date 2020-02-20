@@ -37,7 +37,24 @@ $ sudo usermod -aG docker 'dit username'
 ```
 Genstart efter
 
-## Install and setup Kubernetes
+## Install and setup Kubernetes 
+
+```sh
+$ apt-get update && apt-get install -y apt-transport-https
+```
+
+(REF: https://www.gremlin.com/community/tutorials/how-to-create-a-kubernetes-cluster-on-ubuntu-16-04-with-kubeadm-and-weave-net/)
+```sh
+$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+```
+
+```sh
+$ apt-get update
+``` 
+ 
 ```sh
 $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 ```
