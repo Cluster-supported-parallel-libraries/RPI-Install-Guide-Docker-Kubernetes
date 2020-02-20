@@ -37,12 +37,12 @@ $ sudo usermod -aG docker 'dit username'
 ```
 Genstart efter
 
-### Install kubernetes
+### Install and setup Kubernetes
 ```sh
 $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 ```
 
-### Permanently swapoff
+## Permanently swapoff
 ```sh
 $ sudo swapoff -a && sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
