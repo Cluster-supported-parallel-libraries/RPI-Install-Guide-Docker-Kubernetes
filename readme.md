@@ -40,7 +40,7 @@ Genstart efter
 ## Install and setup Kubernetes 
 
 ```sh
-$ apt-get update && apt-get install -y apt-transport-https
+$ sudo apt-get update && sudo apt-get install -y apt-transport-https
 ```
 
 (REF: https://www.gremlin.com/community/tutorials/how-to-create-a-kubernetes-cluster-on-ubuntu-16-04-with-kubeadm-and-weave-net/)
@@ -52,7 +52,7 @@ EOF
 ```
 
 ```sh
-$ apt-get update
+$ sudo apt-get update
 ``` 
  
 ```sh
