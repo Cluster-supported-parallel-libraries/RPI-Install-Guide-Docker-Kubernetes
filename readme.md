@@ -13,8 +13,7 @@ $ cat /var/lib/misc/dnsmasq.leases
 
 ### Opdater Raspberry Pi
 ```sh
-$ sudo apt-get update
-$ sudo apt-get upgrade
+$ sudo apt-get update && sudo apt-get upgrade
 ```
 
 ### (OPTIONAL) Set hostname
