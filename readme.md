@@ -16,6 +16,11 @@ $ cat /var/lib/misc/dnsmasq.leases
 $ sudo apt-get update && sudo apt-get upgrade
 ```
 
+### Enable root user
+```sh
+$ sudo passwd root
+```
+
 ### (OPTIONAL) Set hostname
 ```sh
 $ sudo hostnamectl set-hostname 'hostname'
@@ -43,6 +48,7 @@ Genstart efter
 $ sudo apt-get update && sudo apt-get install -y apt-transport-https
 ```
 
+Run as root (su -):
 (REF: https://www.gremlin.com/community/tutorials/how-to-create-a-kubernetes-cluster-on-ubuntu-16-04-with-kubeadm-and-weave-net/)
 ```sh
 $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
