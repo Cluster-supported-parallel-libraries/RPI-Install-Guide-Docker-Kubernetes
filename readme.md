@@ -37,17 +37,18 @@ $ sudo usermod -aG docker 'dit username'
 ```
 Genstart efter
 
-### Install and setup Kubernetes
+## Install and setup Kubernetes
 ```sh
 $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 ```
 
-## Permanently swapoff
+### Permanently swapoff
 ```sh
 $ sudo swapoff -a && sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
-
+### Fix 'WARNING IsDockerSystemdCheck'
+Link: https://kubernetes.io/docs/setup/production-environment/container-runtimes/?fbclid=IwAR3YLt3tJuY8L_abUJSvO2z9mFmtSLMrj0VOi-Rz-l7uqqKt9WpYEG0wCoY
 
 #### Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
