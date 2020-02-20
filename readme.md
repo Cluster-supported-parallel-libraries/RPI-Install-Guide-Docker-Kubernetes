@@ -78,7 +78,17 @@ Link: https://kubernetes.io/docs/setup/production-environment/container-runtimes
 $ cat /etc/kubernetes/kubelet.conf > ~/.kube/config
 ```
 
-#### Installer .NET Core SDK og .NET Runtime
+### Kubeadm init (master)
+```sh
+$ sudo kubeadm init
+```
+
+### Åben port i firewall (master)
+```sh
+$ sudo ufw allow 'port f.eks. 6443'/tcp
+```
+
+## Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
 ```sh
