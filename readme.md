@@ -37,6 +37,11 @@ $ sudo usermod -aG docker 'dit username'
 ```
 Genstart efter
 
+### Install kubernetes
+```sh
+$ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+```
+
 #### Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
