@@ -44,8 +44,7 @@ $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 
 ### Permanently swapoff
 ```sh
-$ sudo swapoff -a
-$ sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+$ sudo swapoff -a && sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
 
