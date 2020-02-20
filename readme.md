@@ -88,6 +88,13 @@ $ sudo kubeadm init
 $ sudo ufw allow 'port f.eks. 6443'/tcp
 ```
 
+### The connection to the server localhost:8080 wa refused
+```sh
+$ sudo cp /etc/kubernetes/admin.conf $HOME/
+$ sudo chown $(id -u):$(id -g) $HOME/admin.conf
+$ export KUBECONFIG=$HOME/admin.conf
+```
+
 ## Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
