@@ -42,6 +42,14 @@ Genstart efter
 $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 ```
 
+### Permanently swapoff
+```sh
+$ sudo swapoff -a
+$ sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+```
+
+
+
 #### Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
 Download de pakket filer (husk 32-bit):
