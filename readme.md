@@ -47,8 +47,13 @@ $ sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 $ sudo swapoff -a && sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
-### Fix 'WARNING IsDockerSystemdCheck'
+#### Fix 'WARNING IsDockerSystemdCheck' 
 Link: https://kubernetes.io/docs/setup/production-environment/container-runtimes/?fbclid=IwAR3YLt3tJuY8L_abUJSvO2z9mFmtSLMrj0VOi-Rz-l7uqqKt9WpYEG0wCoY
+
+#### Fix 'kubectl unable to connect to server: x509: certificate signed by unknown authority' error
+```sh
+$ cat /etc/kubernetes/kubelet.conf > ~/.kube/config
+```
 
 #### Installer .NET Core SDK og .NET Runtime
 Link til hjemmeside: https://dotnet.microsoft.com/download/dotnet-core/3.1
