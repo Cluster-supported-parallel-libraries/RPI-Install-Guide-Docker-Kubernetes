@@ -44,6 +44,10 @@ $ sudo nano /etc/init.d/iptablesScript.sh
 #!/bin/sh
 sudo iptables -P FORWARD ACCEPT
 ```
+- Make the file executable.
+```sh
+$ sudo chmod 777 /etc/init.d/iptablesScript.sh
+```
 - Create this file.
 ```sh
 $ sudo nano /lib/systemd/system/startup.service
