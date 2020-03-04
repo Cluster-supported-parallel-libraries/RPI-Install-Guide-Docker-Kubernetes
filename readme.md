@@ -1,10 +1,14 @@
 # Kubernetes setup and installation
+- This guide shows how to setup and intall a working kubernetes cluster using a amd64 machine as a master node and multiple Raspberry Pi's (arm) as worker nodes.
+
+## Prerequisite
+- All the devices must be assigned a static IP addresses on the network that are being used.
 
 ## Install OS
 #### Master
-- Install Ubuntu 18.04.4 LTS on master (amd64).
+- Install Ubuntu 18.04.4 LTS on the master node (amd64).
 #### Raspberry Pi
-- Install Raspbian Buster Lite February 2020 on nodes/Pi's (arm).
+- Install Raspbian Buster Lite February 2020 on the worker nodes/Pi's (arm).
 
 ## Enable SSH
 #### Master
@@ -14,10 +18,54 @@ $ sudo systemctl enable ssh
 $ sudo systemctl start ssh
 ```
 #### Raspberry Pi
-- Create an empty file on the microSD card names 'ssh' or run the following commands.
+- Create an empty file on the microSD card named 'ssh' or run the following commands.
 ```sh
 $ sudo systemctl enable ssh
 $ sudo systemctl start ssh
+```
+
+## Disable firewall
+#### Master
+- Run the following command.
+```sh
+$ sudo ufw disable
+```
+#### Raspberry Pi
+- Create a startup script on the Pi's.
+```sh
+$ sudo nano /etc/init.d/iptablesScript.sh
+```
+- Copy the following to the file and save.
+```sh
+#!/bin/sh
+sudo iptables -P FORWARD ACCEPT
+```
+- Create this file.
+```sh
+$ sudo nano /lib/systemd/system/startup.service
+```
+- Copy the following to the file and save.
+```sh
+[Unit]
+Description=My Sample Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/etc/init.d/iptablesScript.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+- Run the following commands.
+```sh
+$ sudo chmod 644 /lib/systemd/system/sample.service
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable sample.service
+```
+- Reboot
+```sh
+$ sudo reboot
 ```
 
 
