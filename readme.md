@@ -1,4 +1,16 @@
-# RPISetup
+# Kubernetes setup and installation
+
+## Install OS
+- Install Ubuntu 18.04.4 LTS on master (amd64).
+- Install Raspbian Buster Lite February 2020 on nodes/Pi's (arm).
+
+## 
+
+
+
+
+
+
 ### Connect til Raspberry Pi
 - Enable SSH, enten ved at lave en tom fil i microSD-kortet som hedder SSH
 - ELLER, hvis du connecter til RPI igennem HDMI, kan du enable SSH ved at skrive:
