@@ -30,6 +30,10 @@ $ sudo systemctl start ssh
 ```sh
 $ sudo ufw disable
 ```
+- Reboot
+```sh
+$ sudo reboot
+```
 #### Raspberry Pi
 - Create a startup script on the Pi's.
 ```sh
@@ -47,7 +51,7 @@ $ sudo nano /lib/systemd/system/startup.service
 - Copy the following to the file and save.
 ```sh
 [Unit]
-Description=My Sample Service
+Description=My Startup Service
 After=multi-user.target
 
 [Service]
@@ -59,16 +63,83 @@ WantedBy=multi-user.target
 ```
 - Run the following commands.
 ```sh
-$ sudo chmod 644 /lib/systemd/system/sample.service
+$ sudo chmod 644 /lib/systemd/system/startup.service
 $ sudo systemctl daemon-reload
-$ sudo systemctl enable sample.service
+$ sudo systemctl enable startup.service
 ```
 - Reboot
 ```sh
 $ sudo reboot
 ```
 
+## Edit host name
+#### Master
+- Edit this file and change the hostname to 'master-node' (you may choose a different name) and save the file.
+```sh
+$ sudo nano /etc/hosts
+```
+- Run this command to change the hostname in /etc/hostname.
+```sh
+$ sudo hostnamectl set-hostname master-node
+```
+#### Raspberry Pi
+- Edit this file and change the hostname to 'pi01' (or 'pi02', depending on how many Pi's you are using) and save the file.
+```sh
+$ sudo nano /etc/hosts
+```
+- Run this command to change the hostname in /etc/hostname.
+```sh
+$ sudo hostnamectl set-hostname pi01
+```
 
+## Configure cgroup boot options
+#### Master
+- Create this file.
+```sh
+$ sudo nano /boot/cmdline.txt
+```
+- Copy this to the file and save.
+```sh
+cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+```
+#### Raspberry Pi
+- Edit this file.
+```sh
+$ sudo nano /boot/cmdline.txt
+```
+- Append this to the end of the file.
+```sh
+cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+```
+
+## Install updates
+#### Master and Raspberry Pi
+- Run the following command.
+```sh
+$ sudo apt update && sudo apt dist-upgrade
+```
+
+## Disable swap
+#### Master
+- Run the following command.
+```sh
+$ sudo swapoff -a && sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+```
+- Reboot
+```sh
+$ sudo reboot
+```
+#### Raspberry Pi
+- Run the following commands.
+```sh
+$ sudo dphys-swapfile swapoff
+$ sudo dphys-swapfile uninstall
+$ sudo apt purge dphys-swapfile
+```
+- Reboot
+```sh
+$ sudo reboot
+```
 
 ### Connect til Raspberry Pi
 - Enable SSH, enten ved at lave en tom fil i microSD-kortet som hedder SSH
