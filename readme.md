@@ -1,13 +1,24 @@
 # Kubernetes setup and installation
 
 ## Install OS
+#### Master
 - Install Ubuntu 18.04.4 LTS on master (amd64).
+#### Raspberry Pi
 - Install Raspbian Buster Lite February 2020 on nodes/Pi's (arm).
 
-## 
-
-
-
+## Enable SSH
+#### Master
+- Run the following commands.
+```sh
+$ sudo systemctl enable ssh
+$ sudo systemctl start ssh
+```
+#### Raspberry Pi
+- Create an empty file on the microSD card names 'ssh' or run the following commands.
+```sh
+$ sudo systemctl enable ssh
+$ sudo systemctl start ssh
+```
 
 
 
