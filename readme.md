@@ -1,4 +1,4 @@
-# Kubernetes setup and installation
+# Kubernetes installation and setup
 This guide shows how to setup and install a working Kubernetes cluster using a amd64 machine as a master node and multiple arm Raspberry Pi's as worker nodes.
 
 ## Prerequisite
