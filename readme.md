@@ -78,7 +78,7 @@ $ sudo reboot
 ```sh
 $ sudo nano /etc/hosts
 ```
-- Run this command to change the hostname in /etc/hostname.
+- Run this command to change the hostname in */etc/hostname*.
 ```sh
 $ sudo hostnamectl set-hostname master-node
 ```
@@ -87,7 +87,7 @@ $ sudo hostnamectl set-hostname master-node
 ```sh
 $ sudo nano /etc/hosts
 ```
-- Run this command to change the hostname in /etc/hostname.
+- Run this command to change the hostname in */etc/hostname*.
 ```sh
 $ sudo hostnamectl set-hostname pi01
 ```
@@ -194,7 +194,7 @@ $ sudo apt install kubeadm kubectl kubelet
 
 ## Setup Kubernetes.
 #### Master
-- Set /proc/sys/net/bridge/bridge-nf-call-iptables to 1. Run the following command.
+- Set */proc/sys/net/bridge/bridge-nf-call-iptables* to 1. Run the following command.
 ```sh
 $ sysctl net.bridge.bridge-nf-call-iptables=1
 ```
