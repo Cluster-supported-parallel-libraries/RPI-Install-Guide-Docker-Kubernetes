@@ -1,8 +1,8 @@
 # Kubernetes setup and installation
-This guide shows how to setup and intall a working kubernetes cluster using a amd64 machine as a master node and multiple arm Raspberry Pi's as worker nodes.
+This guide shows how to setup and install a working Kubernetes cluster using a amd64 machine as a master node and multiple arm Raspberry Pi's as worker nodes.
 
 ## Prerequisite
-- All the devices must be assigned static IP addresses on the network that are being used.
+- All the devices/nodes must be assigned static IP addresses on the network that are being used.
 
 ## Install OS
 #### Master
