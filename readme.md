@@ -145,7 +145,7 @@ $ sudo apt install curl
 - Run the following commands.
 ```sh
 $ curl -sSL get.docker.com | sh
-$ sudo usermod -aG docker 'username'
+$ sudo usermod -aG docker <username>
 ```
 
 ## Configure Docker daemon options
