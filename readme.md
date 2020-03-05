@@ -223,6 +223,10 @@ $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef1
 ```sh
 $ kubectl get pods --all-namespaces -o wide
 ```
+- Add anonymous role binding.
+```sh
+$ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
+```
 
 ## Join worker nodes to the Kubernetes cluster
 #### Raspberry Pi
