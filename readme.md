@@ -93,7 +93,7 @@ $ sudo nano /etc/hosts
 ```
 - Run this command to change the hostname in */etc/hostname*.
 ```sh
-$ sudo hostnamectl set-hostname pi01
+$ hostnamectl set-hostname pi01
 ```
 
 ## Configure cgroup boot options
