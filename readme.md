@@ -93,6 +93,11 @@ $ sudo nano /etc/hosts
 ```
 - Run this command to change the hostname in */etc/hostname*.
 ```sh
+$ sudo hostnamectl set-hostname pi01
+```
+
+- Run this command again, now without sudo*.
+```sh
 $ hostnamectl set-hostname pi01
 ```
 
