@@ -238,6 +238,10 @@ $ kubeadm join <master-ip-address>:<port> --token <token> --discovery-token-ca-c
 ```sh
 $ kubectl get nodes -o wide
 ```
+### Trouble shooting
+If nodes cant join
+- Check that master and nodes have the same kube version
+- After upgrade run kubeadm init phase bootstrap-token on master
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
