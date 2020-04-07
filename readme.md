@@ -96,11 +96,6 @@ $ sudo nano /etc/hosts
 $ sudo hostnamectl set-hostname pi01
 ```
 
-- Run this command again, now without sudo*.
-```sh
-$ hostnamectl set-hostname pi01
-```
-
 ## Configure cgroup boot options
 #### Master & Raspberry Pi
 - Create or edit this file.
